@@ -1,6 +1,8 @@
 <template>
   <div class="navbar">
-    <h1>my Nav</h1>
+    <router-link to="/" tag="div">Home</router-link>
+    <router-link to="/contact" tag="div">Contact</router-link>
+    <router-link to="/login" tag="div">Login</router-link>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ export default {
 <style scoped>
 .navbar {
   display: flex;
-  width: 99vw;
+  justify-content: space-around;
 }
 
 </style>
