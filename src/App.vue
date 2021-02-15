@@ -21,6 +21,7 @@ export default {
   color: white;
 }
 body{
-  background-color: black;
+  font-family: Arial;
+  background-color: rgb(20, 20, 20);
 }
 </style>

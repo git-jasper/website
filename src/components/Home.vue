@@ -19,10 +19,9 @@ export default {
   width: 99vw;
 }
 .name-img {
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 40px;
+  margin: auto;
   max-width: 90%;
   filter:drop-shadow(2px 2px 2px white);
 }
-
 </style>
