@@ -1,18 +1,24 @@
 <template>
-  <div class="login">
-    <form class="form" @submit.prevent="login">
-      <h1>Log in</h1>
-      <p>
-        <input class="form-field" v-bind:style="inputStyle" type="text" v-model="username" placeholder="username">
-      </p>
-      <p>
-        <input class="form-field" v-bind:style="inputStyle" type="password" v-model="password" placeholder="password">
-      </p>
-      <p>
-        <button class="login-button">Log in</button>
-      </p>
-      <button @click.prevent="secure">test</button>
-    </form>
+  <div>
+    <div class="login">
+      <form class="form" @submit.prevent="login">
+        <h1>Log in</h1>
+        <p>
+          <input class="form-field" v-bind:style="inputStyle" type="text" v-model="username" placeholder="username">
+        </p>
+        <p>
+          <input class="form-field" v-bind:style="inputStyle" type="password" v-model="password" placeholder="password">
+        </p>
+        <p>
+          <button class="login-button">Log in</button>
+        </p>
+        <button @click.prevent="secure">test</button>
+      </form>
+    </div>
+    <div class="img" v-bind:style="imgStyle">
+      Who are you?
+      <img src="../../assets/img/penguin.png" width="200"/>
+    </div>
   </div>
  
 </template>
@@ -27,6 +33,9 @@ export default {
       password: null,
       inputStyle: {
           borderColor: 'whitesmoke'
+      },
+      imgStyle: {
+          visibility: 'hidden'
       }
     }
   },
@@ -42,6 +51,7 @@ export default {
       })     
       .catch(() => {
         this.inputStyle.borderColor = 'red';
+        this.imgStyle.visibility = 'visible';
       });
     },
     secure(){
@@ -67,6 +77,13 @@ export default {
 .login {
   display: flex;
   justify-content: center;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-inline: auto;
+  font-weight: bold;
 }
 
 .form {
